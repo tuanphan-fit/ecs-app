@@ -3,13 +3,19 @@ import { BrowserModule } from '@angular/platform-browser';
 import { RouterModule } from '@angular/router';
 import { AppComponent } from './app.component';
 import { appRoutes } from './app.routes';
-import { NxWelcomeComponent } from './nx-welcome.component';
+import {InputTextModule} from "primeng/inputtext";
+import {AutoFocusModule} from "primeng/autofocus";
+import {EcsLayoutModule, UxFrameworkModule} from "@ecs/ux-framework";
 
 @NgModule({
-  declarations: [AppComponent, NxWelcomeComponent],
+  declarations: [AppComponent],
   imports: [
     BrowserModule,
-    RouterModule.forRoot(appRoutes, { initialNavigation: 'enabledBlocking' }),
+    RouterModule.forRoot(appRoutes, {initialNavigation: 'enabledBlocking'}),
+    InputTextModule,
+    AutoFocusModule,
+    UxFrameworkModule,
+    EcsLayoutModule
   ],
   providers: [],
   bootstrap: [AppComponent],
